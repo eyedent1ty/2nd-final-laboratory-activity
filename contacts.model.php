@@ -22,6 +22,12 @@
     return mysqli_fetch_assoc($result);
   }
 
+  function addContact($name, $phone, $address) {
+    global $connection;
+    $sql = "INSERT INTO tblContact (name, phone, address) VALUES ('$name', '$phone', '$address')";
+    mysqli_query($connection, $sql);
+  }
+
   function deleteContactById($id) {
     global $connection;
     $sql = "DELETE FROM tblContact WHERE tblContact.id=$id";

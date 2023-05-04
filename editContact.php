@@ -1,5 +1,4 @@
 <?php
-require './connection.php';
 require './contacts.model.php';
 
 $id = $_GET['id'];
@@ -42,6 +41,12 @@ if (isset($_POST['submit'])) {
     <input type="submit" name="submit" />
   </form>
 <?php endif; ?>
+
+<?php 
+  if (isset($_POST['submit'])) {
+    echo '<p>Edited Successfully</p>';
+  }
+?>
 
 <br />
 <a href="http://localhost/final/laboratory-1/">Go back to home page</a>

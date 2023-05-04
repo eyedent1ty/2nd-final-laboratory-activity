@@ -1,11 +1,5 @@
 <?php
-include './connection.php';
-
-function addContact($name, $phone, $address) {
-  global $connection;
-  $sql = "INSERT INTO tblContact (name, phone, address) VALUES ('$name', '$phone', '$address')";
-  mysqli_query($connection, $sql);
-}
+require './contacts.model.php';
 ?>
 
 <form method="POST" action="">
